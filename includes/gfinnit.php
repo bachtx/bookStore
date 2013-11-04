@@ -2,7 +2,7 @@
 	define('HOSTNAME','localhost');
 	define('DB_USERNAME','root');
 	define('DB_PASSWORD','');
-	define('DB_DATANAME','db_bookonline');
+	define('DB_DATANAME','bookstores');
 	// innit com_language
 	define('ROOTHOST','http://localhost/bookStore/');
 	define('URLEDITOR',ROOTHOST.'admincp');
