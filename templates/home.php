@@ -1,3 +1,4 @@
+
 <?php
 // include config
 //define('incl_path','includes/');
@@ -8,6 +9,7 @@ require_once(incl_path.'gffunction.php');
 
 // include libs
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
