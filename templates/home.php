@@ -1,6 +1,6 @@
 <?php
 // include config
-define('incl_path','includes/');
+
 // include libs
 ?>
 <!DOCTYPE html>
