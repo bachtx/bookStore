@@ -1,15 +1,3 @@
-
-<?php
-// include config
-//define('incl_path','includes/');
-//define('libs_path','libs/');
-require_once(incl_path.'gfconfig.php');
-require_once(incl_path.'gfinnit.php');
-require_once(incl_path.'gffunction.php');
-
-// include libs
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
