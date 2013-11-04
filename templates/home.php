@@ -1,8 +1,3 @@
-<?php
-// include config
-
-// include libs
-?>
 <!DOCTYPE html>
 <html>
 <head>
