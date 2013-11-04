@@ -12,7 +12,7 @@ class CLS_CONTACTS{
 	
 	public function Insert(){
 		$sql="INSERT into tbl_contacts (`noidung`,`name`,`sdt`) values('".$this->noidung."','".$this->name."','".$this->sdt."') ";
-		echo $sql;
+		echo $sql;die();
 		return $this->objmysql->Query($sql);
 	}
 	public function Num_rows(){
