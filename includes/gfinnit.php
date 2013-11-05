@@ -3,8 +3,6 @@
 	define('DB_USERNAME','root');
 	define('DB_PASSWORD','');
 	define('DB_DATANAME','bookstores');
-	// innit com_language
-	// innit site
 	
 	define('ROOTHOST','http://localhost/bookStore/');
 	define('URLEDITOR',ROOTHOST.'admincp');
