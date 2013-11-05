@@ -13,6 +13,14 @@
             $( "#tabs_products" ).tabs();
         });
     </script>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 </head>
 <body>
     <div class="header">
@@ -79,9 +87,9 @@
         <div class="main_footer">
             <div class="box">
                <div class="col" id="col1">
-                   <h4>Biography & True Stories</h4>
+                   <h4>Question Common</h4>
                    <ul>
-                       <li><a href="#">General</a><span class="border"></span></li>
+                       <li><a href="<?php echo ROOTHOST;?>index.php?com=contents&id=1">General</a><span class="border"></span></li>
                        <li><a href="#">Diaries, Letters & Journals</a><span class="border"></span></li>
                        <li><a href="#">Memoirs</a><span class="border"></span></li>
                        <li><a href="#">True Stories</a><span class="border"></span></li>
@@ -95,7 +103,7 @@
                    </ul>
                </div><!--.col-->
                <div class="col" id="col2">
-                    <h4>Professional & Reference </h4>
+                    <h4>Policy BookStore</h4>
                     <ul>
                         <li><a href="#">Academic and Referencel</a><span class="border"></span></li>
                         <li><a href="#">Business Trade</a><span class="border"></span></li>
@@ -112,7 +120,7 @@
 
                </div><!--.col-->
                 <div class="col" id="col3">
-                    <h4>Earth Sciences </h4>
+                    <h4>Handbook </h4>
                     <ul>
                         <li><a href="#">Earth Sciences</a><span class="border"></span></li>
                         <li><a href="#">Geography</a><span class="border"></span></li>
@@ -130,21 +138,8 @@
 
                 </div><!--.col-->
                 <div class="col" id="col4">
-                    <h4>Mathematics </h4>
-                    <ul>
-                        <li><a href="#">Algebra</a><span class="border"></span></li>
-                        <li><a href="#">Differential Equations</a><span class="border"></span></li>
-                        <li><a href="#">Discrete Mathematics</a><span class="border"></span></li>
-                        <li><a href="#">Fourier Analysis</a><span class="border"></span></li>
-                        <li><a href="#">Numerical Analysis</a><span class="border"></span></li>
-                        <li><a href="#">Probability</a><span class="border"></span></li>
-                        <li><a href="#">Statistical Methods/data Analysis</a><span class="border"></span></li>
-                        <li><a href="#">Stochastic And Random Processes</a><span class="border"></span></li>
-                        <li><a href="#">Topology</a><span class="border"></span></li>
-                        <li><a href="#">Statistics</a><span class="border"></span></li>
-                        <li><a href="#">Mathematics</a></li>
-                    </ul>
-
+                    <h4 title="Bài viết mới nhất">Sharing On Social</h4>
+					<div class="fb-like-box" data-href="https://www.facebook.com/thietkeweb.igf" data-width="200" data-show-faces="true" data-stream="false" data-show-border="true" data-header="false"></div>
                 </div><!--.col-->
             </div><!--box-->
         </div><!--.main_footer-->
