@@ -26,10 +26,10 @@
     </li>
     <li><a href="#"><span>Contents</span></a>
          <ul class="submenu">                       
-			<li><a href="#"><span>Add Categories</span></a></li>
-            <li><a href="#"><span>List Categories</span></a></li>
-            <li><a href="#"><span>Add Contens</span></a></li>
-            <li><a href="#"><span>List Contents</span></a></li>                             				
+			<li><a href="index.php?com=categories&task=add"><span>Add Categories</span></a></li>
+            <li><a href="index.php?com=categories"><span>List Categories</span></a></li>
+            <li><a href="index.php?com=content&task=add"><span>Add Contens</span></a></li>
+            <li><a href="index.php?com=content"><span>List Contents</span></a></li>                             				
         </ul>
     </li>    
     <li><a href="#"><span>Support</span></a>
