@@ -1,9 +1,16 @@
 <?php
 if(isset($_GET['id']))
-	echo $_GET['id'];
+	$pro_id=$_GET['id'];
+	$obj->getOne(" AND `pro_id`='".$pro_id."'");
+	$row=$obj->Fetch_Assoc();
+	
+	$cata->getNameById($row['cat_id']);// $cata la đối tượng class catalog khởi tạo bên layout.php
+	$r=$cata->Fetch_Assoc();
+	$par_id=$r['par_id'];
+	$namePar=$cata->getParNameById($par_id);
 ?>
 <div class="detail_jumlink">
-	<p>Home  <span class="bg_jumlink"></span>   Discounts and Clearance  <span class="bg_jumlink"></span>    Sonatini Hippeastrum Alaska</p>
+	<p>Home  <span class="bg_jumlink"></span>  <?php echo $namePar;?> <span class="bg_jumlink"></span> <?php echo $r['name'];?> <span class="bg_jumlink"></span> <?php echo $row['name'];?></p>
 </div><!--detail_jumlink-->
 <div class="feature">
 	<img src="images/img_feature.png" alt="feature"/>

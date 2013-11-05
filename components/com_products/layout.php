@@ -1,5 +1,7 @@
 <div id="product_wapper">
 <?php
+$obj= new CLS_PRODUCTS();
+$cata= new CLS_CATALOGS();
 $COM='products';
 $viewtype='';
 if(isset($_GET['viewtype'])){

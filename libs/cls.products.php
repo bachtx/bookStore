@@ -8,8 +8,8 @@ class CLS_PRODUCTS{
 		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;
 		return $this->objmysql->Query($sql);
 	}
-    public function getListOne($where=' ',$order=' ORDER BY RAND() ',$limit='0,1'){
-		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;
+    public function getOne($where=''){
+		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where;
 		return $this->objmysql->Query($sql);
 	}
 	public function GetListPro($where=' ',$order=' ORDER BY RAND() ',$limit=' '){
@@ -36,8 +36,10 @@ class CLS_PRODUCTS{
 			$imgtag='<img src="'.$img.'" title="'.$name.'" alt="'.$name.'" class="img_block" width="98" height="150"/>';
 		?>
 			<div class="div_product">
-				<span class="off"><?php echo $persen;?>%</span>
-				<?php echo $imgtag;?>
+				<?php if($persen!=0)
+					echo "<span class=\"off\">$persen%</span>";
+					echo $imgtag;
+				?>
 				<p><a href="index.php?com=products&&viewtype=detail&&id=<?php echo $pro_id;?>" class="name_product"/><?php echo $name;?></a></p>
 				<h4><?php echo $cur_price;?>$</h4>
 			</div><!--.div_product-->	

@@ -39,6 +39,10 @@ class CLS_CATALOGS{
 	}
     	
 	public function getNameById($cat_id){
+		$sql="SELECT `par_id`,`name` FROM `tbl_catalog`  WHERE isactive=1 AND `cat_id` = '$cat_id'";
+		return $this->objmysql->Query($sql);
+	}
+	public function getParNameById($cat_id){
 		$objdata=new CLS_MYSQL;
 		$sql="SELECT `name` FROM `tbl_catalog`  WHERE isactive=1 AND `cat_id` = '$cat_id'"; 
 		$objdata->Query($sql);
