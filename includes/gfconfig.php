@@ -1,6 +1,5 @@
 <?php
 // define path to dirs
-define('SITE_NAME','http://bookonline.com/');
 define('ROOT_PATH',''); 
 define('TEM_PATH',ROOT_PATH.'templates/');
 define('COM_PATH',ROOT_PATH.'components/');

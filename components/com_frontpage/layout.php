@@ -32,9 +32,9 @@
 	<div class="primary">
 		<div id="tabs_products">
 			<ul class="ul_tab">
-				<li><a href="#tabs-1">Nunc tincidunt</a></li>
-				<li><a href="#tabs-2">Proin dolor</a></li>
-				<li><a href="#tabs-3">Aenean lacinia</a></li>
+				<li><a href="#tabs-1">Newest books</a></li>
+				<li><a href="#tabs-2">On sale</a></li>
+				<li><a href="#tabs-3">Most Viewed</a></li>
 			</ul>
 			<div class="clear"></div>
 			<div id="tabs-1">
