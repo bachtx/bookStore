@@ -66,11 +66,11 @@ class CLS_PRODUCTS{
 			$ids=$rows['pro_id'];
 			$code=Substring(stripslashes($rows['code']),0,10);
 			$title=Substring(stripslashes($rows['name']),0,10);
-			include_once("../includes/simple_html_dom.php");
+			//include_once("../includes/simple_html_dom.php");
 			$intro = Substring(stripslashes($rows['intro']),0,10);
-			$intro = str_get_html($intro);
-			$old_price = number_format($rows['old_price']).' <b>VNĐ</b>';
-			$cur_price = number_format($rows['cur_price']).' <b>VNĐ</b>';
+			//$intro = str_get_html($intro);
+			$old_price = number_format($rows['old_price']).' <b>$</b>';
+			$cur_price = number_format($rows['cur_price']).' <b>$</b>';
 			$category = $this->getCatName($rows['cat_id']);
 			
 			$visited=$rows['visited'];
@@ -81,9 +81,9 @@ class CLS_PRODUCTS{
 			echo "</label></td>";
 			echo "<td title='$intro'>$code</td>";
 			echo "<td title='$intro'>$title</td>";
-			echo "<td>$category</td>";
-			echo "<td nowrap='nowrap'>$old_price</td>";
-			echo "<td nowrap='nowrap'>$cur_price</td>";
+			echo "<td nowrap='nowrap' align='center'>$old_price</td>";
+			echo "<td nowrap='nowrap' align='center'>$cur_price</td>";
+			echo "<td align='center'>$category</td>";			
 			echo "<td nowrap='nowrap' align='center'>$visited</td>";			
 			echo "<td align=\"center\">";
 		
