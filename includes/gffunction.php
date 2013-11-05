@@ -106,20 +106,20 @@ function showIconFun($fun,$value){
 			$filename="menuitem.png"; 
 			break;
 		case "delete": 
-			$title=CDELETE;
+			$title='delete';
 			$filename="delete.png"; 
 			break;
 		case "edit": 
-			$title=CEDIT;
+			$title='edit';
 			$filename="icon_edit.png"; 
 			break;
 		case "publish": 
 			if($value==1){
-				$title=CPUBLIC;
+				$title='public';
 				$filename="publish.png";
 			}
 			else{
-				$title=CUNPUBLIC;
+				$title='unpublic';
 				$filename="unpublish.png";
 			}
 			break;
