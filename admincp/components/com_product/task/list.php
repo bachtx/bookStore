@@ -101,7 +101,7 @@
       <tr>
         <td align="center">
         <?php 
-           // paging($total_rows,MAX_ROWS,$cur_page);
+            paging($total_rows,MAX_ROWS,$cur_page);
         ?>
         </td>
       </tr>
