@@ -8,7 +8,8 @@ if(isset($_GET['cat_id'])){
 }
 ?>
 <div class="detail_jumlink">
-	<p>Home  <span class="bg_jumlink"></span>  <?php echo $namePar;?> <span class="bg_jumlink"></span> <?php echo $r['name'];?></p>
+	<p>Home  <span class="bg_jumlink"></span>  <?php echo $namePar;?> 
+		<span class="bg_jumlink"></span> <?php echo $r['name'];?></p>
 </div><!--detail_jumlink-->
 <div class="main_wrap">
 	<div class="sidebar">
