@@ -4,16 +4,17 @@ if(isset($_GET['id']))
 	$obj->getOne(" AND `pro_id`='".$pro_id."'");
 	$row=$obj->Fetch_Assoc();
 	$cat_id = $row['cat_id'];
-	
+	$author_id = $row['author_id'];
+
 	$cata->getNameById($row['cat_id']);// $cata la đối tượng class catalog khởi tạo bên layout.php
 	$r=$cata->Fetch_Assoc();
 	$par_id=$r['par_id'];
 	$namePar=$cata->getParNameById($par_id);
 	//echo '->'.$_SESSION['VIEW_PRO_ID'].'>';
-	if($_SESSION['VIEW_PRO_ID']!=$pro_id) {
+	/*if($_SESSION['VIEW_PRO_ID']!=$pro_id) {
 		$_SESSION['VIEW_PRO_ID']=$pro_id;
 		//$obj->setVisited($pro_id);
-	}
+	}*/
 	//echo $_SESSION['VIEW_PRO_ID'].'|'.$pro_id;
 ?>
 <div class="detail_jumlink">
@@ -29,10 +30,12 @@ if(isset($_GET['id']))
 	<div class="btn_addtocart">
 		<p class="our_price">Our price : <span class="detail_price"><?php echo $row['cur_price'].'$';?></span></p>
 		<p class="sale">
-			Was <?php echo $row['old_price'].'$';?> Save
 			<?php
-			$co = ceil((100-(($row['cur_price']/$row['old_price'])*100)));
-			echo $co."%";
+			if($row['old_price']!=0){
+				echo "Was ".$row['old_price']." $ Save";
+				$co = ceil((100-(($row['cur_price']/$row['old_price'])*100)));
+				echo $co."%";
+			}
 			?> 
 		</p>
 		<a href="#" class="btn_cart">Add to cart</a>
@@ -49,14 +52,14 @@ if(isset($_GET['id']))
 <div class="desc">
 	<div id="desc_tabs">
 		<ul>
-			<li><a href="#tabs-1">Thông tin tác giả</a></li>
-			<li><a href="#tabs-2">Các sách liên quan</a></li>
+			<li><a href="#tabs-1">Author</a></li>
+			<li><a href="#tabs-2">Book Reference</a></li>
 		</ul>
 		<div id="tabs-1">
 			<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
 		</div>
 		<div id="tabs-2">
-			<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+			<?php $obj->GetListPro("AND `author_id`='$author_id'",'ORDER BY `cdate` DESC ','LIMIT 0,20');?>
 		</div>
 	</div>
 	<script type="text/javascript">
