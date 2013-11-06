@@ -3,7 +3,7 @@
 	// Begin Toolbar
 	require_once(LAG_PATH.'lang_author.php');
 	require_once(libs_path.'cls.author.php');
-	
+	require_once(libs_path.'cls.cls.products.php');
 	if(!isset($objlang)) $objlang = new LANG_AUTHOR;
 	
 	$title_manager = $objlang->CATE_MANAGER;
@@ -17,6 +17,7 @@
 ?>
 <?php
 	$obj=new CLS_AUTHOR();
+	$pro= new CLS_PRODUCTS();
 	if(isset($_POST['cmdsave']))
 	{
 		$obj->Name=addslashes($_POST['txtname']);
