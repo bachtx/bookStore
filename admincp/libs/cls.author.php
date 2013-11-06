@@ -42,7 +42,7 @@ class CLS_AUTHOR{
 		{	$rowcount++;
 			$id=$rows['id'];			
 			$name=Substring($rows['name'],0,5);
-			$desc=Substring($rows['desc'],0,30);
+			$desc=Substring($rows['desc'],0,10);
 			echo "<tr name='trow'>";
 			echo "<td width='30' align='center'>$rowcount</td>";
 			echo "<td width='30' align='center'><label>";

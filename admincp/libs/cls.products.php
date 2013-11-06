@@ -124,7 +124,7 @@ class CLS_PRODUCTS{
 		$sql.=$this->Old_price."','".$this->Cur_price."','".$this->Quantity."','";
 		$sql.=$this->Cdate."','".$this->Mdate."','";
 		$sql.=$this->isHot."','".$this->isActive."')";
-		echo $sql;die();
+		//echo $sql;die();
 		return $this->objmysql->Exec($sql);
 	}
 	function Update(){
