@@ -1,6 +1,4 @@
 <?php
-session_start();
-ob_start();
 if(isset($_GET['id']))
 	$pro_id=(int)$_GET['id'];
 	$obj->getOne(" AND `pro_id`='".$pro_id."'");
