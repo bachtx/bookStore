@@ -144,7 +144,7 @@ a {text-decoration:  none; color: #555454; }
 .desc #desc_tabs ul li {display:  inline; float: left; margin-right: 10px;}
 .desc #desc_tabs ul li a {display:  block;  width:  135px; height:  36px; background:  url("../images/desc_tabs.png") no-repeat; text-align:  center; line-height:  36px; font-size:  16px; font-family: "Segoe UI Symbol"; color: #fff;}
 .desc #desc_tabs ul li.ui-tabs-active a {width: 208px; height: 35px; outline:  none; background:#fff; font-size:  18px; color: #7e7e7e; border: 1px solid #d5d2d2; border-radius:  5px 5px 0px 0px; -moz-border-radius:  5px 5px 0px 0px; -webkit-border-radius:  5px 5px 0px 0px; border-bottom:  none;}
-.desc #desc_tabs #tabs-1, .desc #desc_tabs #tabs-2, .desc #desc_tabs #tabs-3 {color: #7e7e7e; font-size:  14px;}
+.desc #desc_tabs #tabs-1, .desc #desc_tabs #tabs-2, .desc #desc_tabs #tabs-3 {color: #7e7e7e; font-size:  14px; overflow: hidden;}
 .desc .comment {overflow: hidden;border: 1px solid #d5d2d2; border-radius:  5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-bottom:  20px; padding: 20px;}
 .desc .comment .name {border-bottom: 1px solid #e3e3e3; overflow: hidden; padding: 20px 0px; }
 
