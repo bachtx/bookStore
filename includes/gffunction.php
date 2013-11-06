@@ -43,7 +43,7 @@ function paging_index($total_rows,$max_rows,$cur_page){
 		for($i=$start;$i<=$end;$i++)
 		{
 			if($i!=$cur_page)
-			$paging.="<a href=\"javascript:gotopage($i)\"> $i </a>";
+			$paging.="<a href=\"javascript:gotopage($i)\" > $i </a>";
 			else
 		      $paging.="<a href=\"#\" class=\"cur_page\" > $i </a>";
 		}

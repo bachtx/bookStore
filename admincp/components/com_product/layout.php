@@ -5,6 +5,7 @@
     include_once(LAG_PATH.'lang_product.php');
     include_once(libs_path.'cls.products.php');
     include_once(libs_path.'cls.catalogs.php');
+	include_once(libs_path.'cls.author.php');
     
     $obj=new CLS_PRODUCTS;
     if(!isset($objlang)) $objlang = new LANG_PRODUCTS;
@@ -17,8 +18,10 @@
     
     if(isset($_POST["cmdsave"])){
 		$obj->CatID=(int)$_POST["cbo_cate"];
+		$obj->AuthorID=(int)$_POST["cbo_author"];
 		$obj->Code =addslashes(un_unicode($_POST["txtcode"]));
 		$obj->Name=	addslashes($_POST["txtname"]);
+		$obj->Publisher=	addslashes($_POST["txtpublisher"]);
 		$obj->Intro=addslashes($_POST["txtintro"]);
 		$obj->Fulltext=	addslashes($_POST['txtfulltext']);
 		$obj->Thumb=addslashes($_POST["txtthumb"]);

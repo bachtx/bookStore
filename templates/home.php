@@ -7,6 +7,7 @@
     <link href="css/jquery.bxslider.css" rel=" stylesheet" type="text/css"/>
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/jquery-ui.js" ></script>
+	<script src="js/gfscript.php" ></script>
     <script src="js/jquery.bxslider.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -59,7 +60,7 @@
                 <ul>
                     <li class="hover"><a href="<?php echo ROOTHOST; ?>">Home</a></li>
                     <li ><a href="#">Products</a></li>
-					<li ><a href="#">Books 1$</a></li>
+					<li ><a href="index.php?com=products&viewtype=book1">Books 1$</a></li>
                     <li ><a href="#">News</a></li>
                     <li><a href="#">Payment</a></li>
                     <li><a href="#">Support</a></li>

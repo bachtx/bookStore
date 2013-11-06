@@ -17,14 +17,20 @@
             <li><a href="index.php?com=product"><span>List Book</span></a></li>     				
         </ul>
     </li>
-    <li><a href="#"><span>Order</span></a>
+	 <li><a href="#"><span>Author Management</span></a>
+         <ul class="submenu">                       
+			<li><a href="index.php?com=author&task=add"><span>Add Author</span></a></li>
+            <li><a href="index.php?com=author"><span>List Author</span></a></li>            	
+        </ul>
+    </li>
+    <li><a href="#"><span>Order Management</span></a>
          <ul class="submenu">                       
 			<li><a href="#"><span>New Order</span></a></li>
             <li><a href="#"><span>Processing Order</span></a></li>
             <li><a href="#"><span>Finished Order</span></a></li>                            				
         </ul>
     </li>
-    <li><a href="#"><span>Contents</span></a>
+    <li><a href="#"><span>Contents Management</span></a>
          <ul class="submenu">                       
 			<li><a href="index.php?com=categories&task=add"><span>Add Categories</span></a></li>
             <li><a href="index.php?com=categories"><span>List Categories</span></a></li>

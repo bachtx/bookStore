@@ -2,8 +2,6 @@
 	defined('ISHOME') or die('Can not acess this page, please come back!');
 	$keyword='Keyword';
 	$action='';
-	$parid='';
-	$level=0;
 	
 	if(isset($_POST['txtkeyword'])){
 		$keyword=$_POST['txtkeyword'];
@@ -15,19 +13,6 @@
 	}
 	if($action!='' && $action!='all' )
 		$strwhere.="AND `isactive` = '$action'";
-
-	//echo $strwhere;
-	if(!isset($_SESSION['CUR_PAGE_CAT']))
-		$_SESSION['CUR_PAGE_CAT']=1;
-	if(isset($_POST['txtCurnpage'])){
-		$_SESSION['CUR_PAGE_CAT']=$_POST['txtCurnpage'];
-	}
-	$obj->getList($strwhere,'');
-	$total_rows=$obj->Num_rows();
-	if($_SESSION['CUR_PAGE_CAT']>ceil($total_rows/MAX_ROWS))
-		$_SESSION['CUR_PAGE_CAT']=ceil($total_rows/MAX_ROWS);
-	$cur_page=$_SESSION['CUR_PAGE_CAT'];
-	echo $cur_page;
 ?>
 <div id="list">
   <script language="javascript">
@@ -65,15 +50,15 @@
       <tr class="header">
         <td width="30" align="center">#</td>
         <td width="30" align="center"><input type="checkbox" name="chkall" id="chkall" value="" onclick="docheckall('chk',this.checked);" /></td>
-        <td width="50" align="center">Par_id</td>
-        <td align="center">Name</td>
+        <td align="center" width='80'>Id</td>
+		<td align="center" width='200'>Name</td>
         <td align="center" width="400">Description</td>
         <td width="50" align="center">Public</td>
         <td width="50" align="center">Edit</td>
         <td width="50" align="center">Delete</td>
       </tr>
       <?php
-	  $obj->listTableCate($strwhere,$cur_page,$parid,$level,0);
+	  $obj->listTableAuthor($strwhere);
 	  ?>
       
     </table>
@@ -82,7 +67,7 @@
       <tr>
         <td align="center">	  
         <?php 
-            paging($total_rows,MAX_ROWS,$cur_page);
+            //paging($total_rows,MAX_ROWS,$cur_page);
         ?>
         </td>
       </tr>

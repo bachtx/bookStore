@@ -4,6 +4,8 @@ class CLS_PRODUCTS{
 			'ID'=>'-1',
 			'CatID'=>'0',
 			'Code'=>'0',
+			'AuthorID'=>'0',
+			'Publisher'=>'',
 			'Name'=>'',
 			'Intro'=>'',
 			'Fulltext'=>'',
@@ -66,11 +68,11 @@ class CLS_PRODUCTS{
 			$ids=$rows['pro_id'];
 			$code=Substring(stripslashes($rows['code']),0,10);
 			$title=Substring(stripslashes($rows['name']),0,10);
-			include_once("../includes/simple_html_dom.php");
+			//include_once("../includes/simple_html_dom.php");
 			$intro = Substring(stripslashes($rows['intro']),0,10);
-			$intro = str_get_html($intro);
-			$old_price = number_format($rows['old_price']).' <b>VNĐ</b>';
-			$cur_price = number_format($rows['cur_price']).' <b>VNĐ</b>';
+			//$intro = str_get_html($intro);
+			$old_price = number_format($rows['old_price']).' <b>$</b>';
+			$cur_price = number_format($rows['cur_price']).' <b>$</b>';
 			$category = $this->getCatName($rows['cat_id']);
 			
 			$visited=$rows['visited'];
@@ -81,9 +83,9 @@ class CLS_PRODUCTS{
 			echo "</label></td>";
 			echo "<td title='$intro'>$code</td>";
 			echo "<td title='$intro'>$title</td>";
-			echo "<td>$category</td>";
-			echo "<td nowrap='nowrap'>$old_price</td>";
-			echo "<td nowrap='nowrap'>$cur_price</td>";
+			echo "<td nowrap='nowrap' align='center'>$old_price</td>";
+			echo "<td nowrap='nowrap' align='center'>$cur_price</td>";
+			echo "<td align='center'>$category</td>";			
 			echo "<td nowrap='nowrap' align='center'>$visited</td>";			
 			echo "<td align=\"center\">";
 		
@@ -117,8 +119,8 @@ class CLS_PRODUCTS{
 		}
 	}
 	function Add_new(){
-		$sql="INSERT INTO tbl_products (`cat_id`,`code`,`name`,`intro`,`fulltext`,`thumb`,`old_price`,`cur_price`,`quantity`,`cdate`,`mdate`,`ishot`,`isactive`) VALUES ";
-		$sql.="('".$this->CatID."','".$this->Code."','".$this->Name."','".$this->Intro."','".$this->Fulltext."','".$this->Thumb."','";
+		$sql="INSERT INTO tbl_products (`cat_id`,`code`,`name`,`intro`,`author_id`,`publisher`,`fulltext`,`thumb`,`old_price`,`cur_price`,`quantity`,`cdate`,`mdate`,`ishot`,`isactive`) VALUES ";
+		$sql.="('".$this->CatID."','".$this->Code."','".$this->Name."','".$this->Intro."','".$this->AuthorID."','".$this->Publisher."','".$this->Fulltext."','".$this->Thumb."','";
 		$sql.=$this->Old_price."','".$this->Cur_price."','".$this->Quantity."','";
 		$sql.=$this->Cdate."','".$this->Mdate."','";
 		$sql.=$this->isHot."','".$this->isActive."')";
@@ -131,6 +133,8 @@ class CLS_PRODUCTS{
 									 `name`='".$this->Name."',
 									 `intro`='".$this->Intro."',
 									 `fulltext`='".$this->Fulltext."',
+									 `author_id`='".$this->AuthorID."',
+									 `publisher`='".$this->Publisher."',
 									 `thumb`='".$this->Thumb."',
 									 `old_price`='".$this->Old_price."',
 									 `cur_price`='".$this->Cur_price."',
@@ -140,6 +144,7 @@ class CLS_PRODUCTS{
 									 `ishot`='".$this->isHot."',
 									 `isactive`='".$this->isActive."' 
 								WHERE `pro_id`='".$this->ID."'";
+								//echo $sql;die();
 		return $this->objmysql->Exec($sql);
 	}
 	function Delete($ids){

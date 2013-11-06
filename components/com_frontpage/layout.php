@@ -56,7 +56,7 @@
 					<a href="#" class="selected">3</a>
 					<a href="#">4</a>
 					<a href="#">5</a>
-				</div><!--.pagin-->
+				</div><!--.pagin-->				
 			</div>
 			<div id="tabs-2">
 				<p> San pham dang duoc cap nhat...</p>
