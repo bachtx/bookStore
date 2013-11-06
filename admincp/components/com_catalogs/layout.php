@@ -17,7 +17,7 @@
 ?>
 <?php
 	$obj=new CLS_CATALOGS();
-	if(isset($_POST['cmdsave'])) // them hoac sua 
+	if(isset($_POST['cmdsave']))
 	{
 		$obj->ParID=(int)$_POST['cbo_cate'];
 		$obj->Name=addslashes($_POST['txtname']);
