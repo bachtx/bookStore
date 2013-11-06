@@ -11,7 +11,7 @@ define('IMG_PATH',ROOT_PATH.'images/');
 define('LIB_PATH',ROOT_PATH.'libs/');
 define('JSC_PATH',ROOT_PATH.'js/');
 
-define('MAX_ROWS','15');
+define('MAX_ROWS','30');
 define('MAX_ITEM','15'); // số bản ghi trên 1 trang
 define('LOGIN_TIME_OUT','60');
 ?>
