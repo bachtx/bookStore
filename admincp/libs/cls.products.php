@@ -140,6 +140,7 @@ class CLS_PRODUCTS{
 									 `ishot`='".$this->isHot."',
 									 `isactive`='".$this->isActive."' 
 								WHERE `pro_id`='".$this->ID."'";
+								//echo $sql;die();
 		return $this->objmysql->Exec($sql);
 	}
 	function Delete($ids){
