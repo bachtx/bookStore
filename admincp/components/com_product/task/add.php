@@ -47,6 +47,20 @@ $(function() {
 			
         </tr>
 		<tr>
+			<td align="right" bgcolor="#EEEEEE"><strong>Author</strong></td>
+			<td>
+				<select name="cbo_author" id="cbo_author">
+				<option value=''>Chọn tác giả</option>
+				<?php 
+				  if(!isset($objauthor)) $objauthor=new CLS_AUTHOR();
+					$objauthor->getListAuthor();				
+				?>
+			  </select>
+			</td>
+			<td align="right" bgcolor="#EEEEEE"><strong>Publisher<font color="red">*</font></strong></td>
+			<td><input name="txtpublisher" type="text" class="txtpublisher" size="35" />			
+        </tr>
+		<tr>
 			<td align="right" bgcolor="#EEEEEE"><strong>Curent Price</strong></td>
 			<td><input name="txt_curprice" type="text" value='0'/>VNĐ</td>
 			<td align="right" bgcolor="#EEEEEE"><strong>isHot&nbsp;</strong></td>
