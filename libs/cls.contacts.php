@@ -8,8 +8,6 @@ class CLS_CONTACTS{
 	public function CLS_PRODUCTS(){
 		$this->objmysql=new CLS_MYSQL;
 	}
-	
-	
 	public function Insert(){
 		$sql="INSERT into tbl_contacts (`noidung`,`name`,`sdt`) values('".$this->noidung."','".$this->name."','".$this->sdt."') ";
 		echo $sql;die();
