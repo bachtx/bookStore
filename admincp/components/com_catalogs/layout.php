@@ -17,7 +17,7 @@
 ?>
 <?php
 	$obj=new CLS_CATALOGS();
-	if(isset($_POST['cmdsave']))
+	if(isset($_POST['cmdsave'])) // them hoac sua 
 	{
 		$obj->ParID=(int)$_POST['cbo_cate'];
 		$obj->Name=addslashes($_POST['txtname']);
@@ -47,7 +47,7 @@
 		}
 		echo "<script language=\"javascript\">window.location='index.php?com=".COMS."'</script>";
 	}
-	
+	///
 	define('THIS_COM_PATH',COM_PATH.'com_'.COMS.'/');
 	if(isset($_GET['task']))
 		$task=$_GET['task'];

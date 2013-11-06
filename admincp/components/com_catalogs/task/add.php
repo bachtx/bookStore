@@ -35,6 +35,7 @@
         <input name="optactive" type="radio" id="radio2" value="0"/>No</td>
       </tr>
     </table>
+
     <fieldset>
 <legend><strong>Description:</strong></legend>
            <textarea name="txt_metadesc" id="txt_metadesc" cols="45" rows="5"></textarea>
