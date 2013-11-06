@@ -1,10 +1,10 @@
 <?php
-	define('COMS','catalogs');
+	define('COMS','categories');
 	// Begin Toolbar
-	require_once(LAG_PATH.'lang_catalogs.php');
-	require_once(libs_path.'cls.catalogs.php');
+	require_once(LAG_PATH.'lang_categories.php');
+	require_once(libs_path.'cls.categories.php');
 	
-	if(!isset($objlang)) $objlang = new LANG_CATALOGS;
+	if(!isset($objlang)) $objlang = new LANG_CATEGORIES;
 	
 	$title_manager = $objlang->CATE_MANAGER;
 	if(isset($_GET['task']) && $_GET['task']=='add')
@@ -16,18 +16,18 @@
 	// End toolbar
 ?>
 <?php
-	$obj=new CLS_CATALOGS();
-	if(isset($_POST['cmdsave']))
+	$obj=new CLS_CATEGORIES();
+	if(isset($_POST['cmdsave'])) // them hoac sua 
 	{
-		$obj->ParID=(int)$_POST['cbo_cate'];
-		$obj->Name=addslashes($_POST['txtname']);
+		$obj->cat_id=(int)$_POST['cbo_cat'];
+		$obj->name=addslashes($_POST['txtname']);
 		
-		$sContent=addslashes($_POST['txtdesc']);
-		$obj->Intro=encodeHTML($sContent);
+		$sContent=addslashes($_POST['txt_metadesc']);
+		$obj->desc=encodeHTML($sContent);
 		
-		$obj->isActive=(int)$_POST['optactive'];
+		$obj->isactive=(int)$_POST['optactive'];
 		if(isset($_POST['txtid'])){
-			$obj->ID=(int)$_POST['txtid'];
+			$obj->id=(int)$_POST['txtid'];
 			$obj->Update();
 		}else{
 			$obj->Add_new();

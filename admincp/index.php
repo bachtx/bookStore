@@ -8,6 +8,7 @@ require_once(incl_path.'gfconfig.php');
 require_once(incl_path.'gfinnit.php');
 require_once(libs_path.'cls.mysql.php');
 require_once(libs_path.'cls.users.php');
+
 require_once(incl_path.'gffunction.php');
 $UserLogin=new CLS_USERS();
 ?>
