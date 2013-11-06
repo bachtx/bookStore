@@ -5,7 +5,7 @@ class CLS_PRODUCTS{
 		$this->objmysql=new CLS_MYSQL;
 	}
 	public function getList($where=' ',$order=' ORDER BY RAND() ',$limit=' '){
-		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;
+		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;	
 		return $this->objmysql->Query($sql);
 	}
     public function getOne($where=''){
@@ -13,7 +13,7 @@ class CLS_PRODUCTS{
 		return $this->objmysql->Query($sql);
 	}
 	public function GetListPro($where=' ',$order=' ORDER BY RAND() ',$limit=' '){
-		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;
+		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;	
 		$objdata=new CLS_MYSQL();
 		$objcat = new CLS_CATALOGS;
 		$objdata->Query($sql);
@@ -54,6 +54,7 @@ class CLS_PRODUCTS{
 	}
 	public function setVisited($id){
 		$sql='UPDATE tbl_products SET `visited`=`visited`+1 WHERE `pro_id`='.$id;
+		echo $sql;
 		return $this->objmysql->Query($sql);
 	}
 }

@@ -7,6 +7,7 @@
     <link href="css/jquery.bxslider.css" rel=" stylesheet" type="text/css"/>
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/jquery-ui.js" ></script>
+	<script src="js/gfscript.php" ></script>
     <script src="js/jquery.bxslider.js"></script>
     <script type="text/javascript">
         $(function() {

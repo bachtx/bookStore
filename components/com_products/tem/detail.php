@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['id']))
-	$pro_id=$_GET['id'];
+	$pro_id=(int)$_GET['id'];
 	$obj->getOne(" AND `pro_id`='".$pro_id."'");
 	$row=$obj->Fetch_Assoc();
 	
@@ -8,6 +8,12 @@ if(isset($_GET['id']))
 	$r=$cata->Fetch_Assoc();
 	$par_id=$r['par_id'];
 	$namePar=$cata->getParNameById($par_id);
+	//echo '->'.$_SESSION['VIEW_PRO_ID'].'>';
+	if($_SESSION['VIEW_PRO_ID']!=$pro_id) {
+		$_SESSION['VIEW_PRO_ID']=$pro_id;
+		//$obj->setVisited($pro_id);
+	}
+	//echo $_SESSION['VIEW_PRO_ID'].'|'.$pro_id;
 ?>
 <div class="detail_jumlink">
 	<p>Home  <span class="bg_jumlink"></span>  <?php echo $namePar;?> <span class="bg_jumlink"></span> <?php echo $r['name'];?> <span class="bg_jumlink"></span> <?php echo $row['name'];?></p>

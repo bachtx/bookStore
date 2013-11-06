@@ -27,6 +27,7 @@
 	if($_SESSION['CUR_PAGE_CAT']>ceil($total_rows/MAX_ROWS))
 		$_SESSION['CUR_PAGE_CAT']=ceil($total_rows/MAX_ROWS);
 	$cur_page=$_SESSION['CUR_PAGE_CAT'];
+	echo $cur_page;
 ?>
 <div id="list">
   <script language="javascript">
