@@ -119,7 +119,7 @@ class CLS_PRODUCTS{
 		$objdata = new CLS_MYSQL;
 		$objdata->query($sql);
 		while($row = $objdata->Fetch_Assoc()){
-		$name = $this->truncateString($row['name'],20,true);	
+			$name = $this->truncateString($row['name'],20,true);	
 		?>
 		<div class="like_product">
 			<div class="item">
@@ -134,6 +134,31 @@ class CLS_PRODUCTS{
 		<?php	
 		}
 	}
-	
+	public function getComment($pro_id){
+		$sql = "SELECT * FROM tbl_comment WHERE `pro_id`=$pro_id ORDER BY cDate DESC";
+		$objdata = new CLS_MYSQL;
+		$objdata->query($sql);
+		while($row = $objdata->Fetch_Assoc()){
+		?>
+		<div class="name">
+			<div class="img">
+				<img src="images/name.png" alt="name"/>
+				<p><?php echo $row['name'];?></p>
+			</div><!--.img-->
+
+			<p class="review">
+				<?php echo $row['fulltext'];?>
+			</p>
+		</div><!--.name-->
+		<?php	
+		}
+	}
+	public function insertComment($pro_id){
+		if(isset($_POST['submit'])){
+		$name = $_POST['name'];
+		$content = $_POST['content'];
+		$sql = "INSERT INTO tbl_comment(`name`,`fulltext`) VALUES('$name','$content') WHERE `pro_id`=$pro_id";
+		}
+	}
 }
 ?>
