@@ -94,8 +94,8 @@ a {text-decoration:  none; color: #555454; }
 .sidebar ul li {height:  30px; line-height:  30px; display:  block; }
 .sidebar ul li:hover {background: url("../images/all_bg.png") repeat-x; overflow: hidden;}
 
-.primary {width:  770px; float: left; border: 1px solid #d6d6d6;margin-right: -5px; margin-top: 39px; padding: 20px 5px 35px 15px; margin-bottom: 10px;}
-.primary .pagin { clear: both; text-align:  right; margin-right: 20px; overflow:  hidden; float: right; margin-top: 58px; margin-bottom: -20px;}
+.primary {width:  770px; float: left; border: 1px solid #d6d6d6;margin-right: -5px; margin-top: 39px; padding: 20px 5px 20px 15px; margin-bottom: 10px;}
+.primary .pagin { clear: both; text-align:  right; overflow:  hidden; float: right; margin-top: 30px;}
 .primary .pagin a {display: block; width:  24px; height:  28px; float: left; text-align:  center; line-height:  28px; font-family: Helveticaltstd-light; font-size:  16px;}
 .primary .pagin .selected {background: url("../images/bg_pagin.png") no-repeat ; }
 .primary #tabs_products {position: relative;}
@@ -177,13 +177,18 @@ a {text-decoration:  none; color: #555454; }
 .check_out .check_out_button a {font-weight: bold;display: inline-block; width: 98px; height: 38px; background: url("../images/btn_submit.png") no-repeat; line-height: 38px;}
 
 /******************Contact_page****************/
-.contact_page {width: 100%; overflow: hidden;}
+.contact_page {width: 70%; overflow: hidden; margin-left:auto; margin-right:auto;}
+.contact_page p{color:#7e7e7e; font-size:15px;}
 .contact_page form {float: left;width: 500px;}
 .contact_page form label {display: block; margin: 10px 0px; }
-.contact_page form input {width: 270px; padding: 5px; border: 1px solid #dedede; color: #808b98}
-.contact_page form textarea {width: 270px; padding: 30px; border: 1px solid #dedede; color: #808b98; }
+.contact_page form input {width: 400px; padding: 5px; border: 1px solid #dedede; color: #808b98}
+.contact_page form textarea {width: 350px; padding: 30px; border: 1px solid #dedede; color: #808b98; }
 .contact_page form input[type="submit"] {margin: 20px 0px;;font-family: "SegoeWP Bold";border: none;  width: 98px; height: 38px; background: url("../images/btn_submit.png") no-repeat; cursor: pointer; color: #555454;}
-.contact_page .contact_info {float: right;}
+.contact_page .mess {width:70%; margin-left:auto; margin-right:auto;}
+
+.contact_page .mess p{color:#7e7e7e; font-weight:bold;}
+.contact_page table td {color:#7e7e7e;}
+.contact_page span {color:red; font-weight:bold;}
 /*.desc .comment .name:last-child {border-bottom: none;}*/
 .desc .comment h4 {font-size: 20px; font-family: "Segoe UI Symbol"; color: #7e7e7e; }
 .desc .comment .img {float: left; margin-right: 15px; }
