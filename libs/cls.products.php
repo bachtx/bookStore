@@ -91,5 +91,16 @@ class CLS_PRODUCTS{
 		echo $sql;
 		return $this->objmysql->Query($sql);
 	}
+	public function getAuthor($author_id){
+		$sql = "SELECT * FROM tbl_author WHERE `id`=$author_id";
+		$objdata = new CLS_MYSQL;
+		$objdata->query($sql);
+		while($row = $objdata->Fetch_Assoc()){
+			$name = $row['name'];
+			$desc = $row['desc'];
+			echo $name."<br/><br/>";
+			echo $desc;
+		}
+	}
 }
 ?>
