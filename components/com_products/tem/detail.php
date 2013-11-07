@@ -127,75 +127,7 @@ if(isset($_GET['id']))
 
 <div class="like">
 	<h3>You may also like</h3>
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-	<div class="like_product">
-		<div class="item">
-			<a href="" class="img"><img src="images/like_product.png" alt="like product"/></a>
-			<div>
-				<h4><a href="#" >The Hare With Amber</a></h4>
-				<p class="like_price">$50</p>
-				<a href="#" class="read_more">Read more</a>
-			</div>
-		</div><!--.item-->
-	</div><!--like_product-->
-
+	<?php
+		$obj->getLike($cat_id);
+	?>
 </div><!--.like-->
