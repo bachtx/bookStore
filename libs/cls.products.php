@@ -102,5 +102,38 @@ class CLS_PRODUCTS{
 			echo $desc;
 		}
 	}
+	function truncateString($str, $chars, $to_space, $replacement="...") {
+	    if($chars > strlen($str)) return $str;
+      	   $str = substr($str, 0, $chars);
+
+	    $space_pos = strrpos($str, " ");
+		   if($to_space && $space_pos >= 0) {
+		       $str = substr($str, 0, strrpos($str, " "));
+		   }
+
+		   return($str . $replacement);
+	}
+
+	public function getLike($cat_id){
+		$sql = "SELECT * FROM tbl_products WHERE `cat_id`=$cat_id";
+		$objdata = new CLS_MYSQL;
+		$objdata->query($sql);
+		while($row = $objdata->Fetch_Assoc()){
+		$name = $this->truncateString($row['name'],20,true);	
+		?>
+		<div class="like_product">
+			<div class="item">
+				<a href="index.php?com=products&&viewtype=detail&&id=<?php echo $row['pro_id'];?>" class="img"><img src="<?php echo $row['thumb'];?>" alt="like product"/></a>
+				<div>
+					<h4><?php echo $name;?></h4>
+					<p class="like_price"><?php echo $row['cur_price']."$";?></p>
+					<a href="index.php?com=products&&viewtype=detail&&id=<?php echo $row['pro_id'];?>" class="read_more">Read more</a>
+				</div>
+			</div><!--.item-->
+		</div><!--like_product-->
+		<?php	
+		}
+	}
+	
 }
 ?>
