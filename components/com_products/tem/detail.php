@@ -70,39 +70,10 @@ if(isset($_GET['id']))
 
 	<div class="comment">
 		<h4>Product review</h4>
-		<div class="name">
-			<div class="img">
-				<img src="images/name.png" alt="name"/>
-				<p>Name 1</p>
-			</div><!--.img-->
-
-			<p class="review">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-				when an unknown printer took a galley of type and scrambled it to make a type specimen
-				book. It has survived not only five centuries, but also the leap into electronic typesetting,
-				remaining essentially unchanged. It was popularised in the 1960s with the
-				release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-				desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-			</p>
-		</div><!--.name-->
-		<div class="name">
-			<div class="img">
-				<img src="images/name.png" alt="name"/>
-				<p>Name 2</p>
-			</div><!--.img-->
-
-			<p class="review">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-				when an unknown printer took a galley of type and scrambled it to make a type specimen
-				book. It has survived not only five centuries, but also the leap into electronic typesetting,
-				remaining essentially unchanged. It was popularised in the 1960s with the
-				release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-				desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-			</p>
-		</div><!--.name-->
-		<form>
+		<?php
+		$obj->getComment($pro_id);
+		?>
+		<form action="" method="post">
 			<fieldset>
 				<legend>Write a comment</legend>
 				<p>
@@ -122,6 +93,9 @@ if(isset($_GET['id']))
 				</p>
 			</fieldset>
 		</form>
+		<?php
+		$obj->insertComment($pro_id);
+		?>
 	</div><!--.comment-->
 </div><!--.desc-->
 
