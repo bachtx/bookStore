@@ -135,15 +135,16 @@ class CLS_PRODUCTS{
 		}
 	}
 	public function getComment($pro_id){
-		$sql = "SELECT * FROM tbl_comment WHERE `pro_id`=$pro_id ORDER BY cDate DESC";
+		$sql = "SELECT * FROM tbl_comment WHERE `pro_id`=$pro_id ORDER BY cDate";
 		$objdata = new CLS_MYSQL;
 		$objdata->query($sql);
 		while($row = $objdata->Fetch_Assoc()){
+			$name = $this->truncateString($row['name'],10,true);
 		?>
 		<div class="name">
 			<div class="img">
 				<img src="images/name.png" alt="name"/>
-				<p><?php echo $row['name'];?></p>
+				<p><?php echo $name;?></p>
 			</div><!--.img-->
 
 			<p class="review">
@@ -157,7 +158,9 @@ class CLS_PRODUCTS{
 		if(isset($_POST['submit'])){
 		$name = $_POST['name'];
 		$content = $_POST['content'];
-		$sql = "INSERT INTO tbl_comment(`name`,`fulltext`) VALUES('$name','$content') WHERE `pro_id`=$pro_id";
+		$sql = "INSERT INTO tbl_comment(`name`,`fulltext`,`pro_id`,`cDate`) VALUES('$name','$content','$pro_id',NOW()) ";
+		$objdata = new CLS_MYSQL;
+		$objdata->query($sql);
 		}
 	}
 }
