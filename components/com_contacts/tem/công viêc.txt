@@ -1,7 +1,0 @@
-Công việc
-1. Thiêt kế giao diện cho danh sách các bài viết theo nhóm tin
-2. Thiết kế giao diện chi tiết cho bài viết
-3. Thêm bảng comment vao csdl
-4. Nhập liệu sản phẩm
-5. Tìm kiếm 1 sô trang web vê sách nước ngoài 
-
