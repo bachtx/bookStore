@@ -209,3 +209,18 @@ table.list tr:hover td,table.list tr.active td{
 /*End style login*/
 .txtname_err,.txtcode_err{color:#ff0000;}
 #path{text-align:right; height:20px; line-height:20px;}
+div.paging a, p.paging a {
+    background-color: #DDDDDD;
+    height: 21px;
+    line-height: 21px;
+    margin: 1px;
+    padding: 0 5px;
+}
+a {
+    color: #003366;
+    text-decoration: none;
+}
+a.cur_page {
+    background-color: #3399CC !important;
+    color: #FFFFFF;
+}

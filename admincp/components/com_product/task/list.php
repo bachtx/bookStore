@@ -25,10 +25,10 @@
 	if(!isset($_SESSION['CUR_PAGE_PRO']))
 		$_SESSION['CUR_PAGE_PRO']=1;
 	if(isset($_POST['txtCurnpage'])){
-		$_SESSION['CUR_PAGE_CON']=$_POST['txtCurnpage'];
+		$_SESSION['CUR_PAGE_PRO']=$_POST['txtCurnpage'];
 	}
 	$obj->getList($strwhere,'');
-	$total_rows=$obj->Num_rows();
+	$total_rows=$obj->Num_rows();	
 	if($_SESSION['CUR_PAGE_PRO']>ceil($total_rows/MAX_ROWS))
 		$_SESSION['CUR_PAGE_PRO']=ceil($total_rows/MAX_ROWS);
 	$cur_page=($_SESSION['CUR_PAGE_PRO']<1)?1:$_SESSION['CUR_PAGE_PRO'];
@@ -64,7 +64,7 @@
 			  ?>
           <script language="javascript">
 			cbo_Selected('cbo_cont','<?php echo $catid;?>');
-            </script>
+           </script>
         </select>
         </label>
         <select name="cbo_active" id="cbo_active" onchange="document.frm_list.submit();">

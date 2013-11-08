@@ -3,7 +3,7 @@
 	// Begin Toolbar
 	require_once(LAG_PATH.'lang_author.php');
 	require_once(libs_path.'cls.author.php');
-	require_once(libs_path.'cls.cls.products.php');
+	require_once(libs_path.'cls.products.php');
 	if(!isset($objlang)) $objlang = new LANG_AUTHOR;
 	
 	$title_manager = $objlang->CATE_MANAGER;

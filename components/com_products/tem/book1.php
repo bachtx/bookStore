@@ -5,7 +5,7 @@ if(isset($_GET['cat_id'])){
 ?>
 <div class="detail_jumlink">
 	<p>Home  <span class="bg_jumlink"></span>  <?php echo "Product";?> 
-		<span class="bg_jumlink"></span> <?php echo "Book1";?></p>
+		<span class="bg_jumlink"></span> <?php echo "Book 1$";?></p>
 </div><!--detail_jumlink-->
 <div class="main_wrap">
 	<div class="sidebar">
@@ -24,7 +24,7 @@ if(isset($_GET['cat_id'])){
 	</div><!--sidebar-->
 	<div class="primary" id = "product_page">
 		<div id="tabs_products">
-			<h3>Science Fiction</h3>
+			<h3>Books 1$</h3>
 			<div id="tabs-1">
 				<!-- tir-1 -->
 				<?php 					

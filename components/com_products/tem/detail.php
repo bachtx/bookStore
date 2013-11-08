@@ -35,7 +35,7 @@ if(isset($_GET['id']))
 			echo $co."%";
 			?> 
 		</p>
-		<a href="#" class="btn_cart">Add to cart</a>
+		<a href="#" class="btn_cart" pro_id='<?php echo $pro_id;?>'>Add to cart</a>
 		<div class="paypal">
 			<p class="lock">Safe, Secure Shopping</p>
 			<a href="#"><img src="images/paypal.png" alt="paypal"/> </a>
@@ -196,3 +196,14 @@ if(isset($_GET['id']))
 	</div><!--like_product-->
 
 </div><!--.like-->
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('.btn_cart').click(function(){
+			var proid= $(this).attr('pro_id');
+			$.post('ajaxs/addcart.php',{'proid':proid},function(data){
+				alert('Add Cart Sucess !');
+				window:location="index.php?com=products&&viewtype=detail&&id="+proid;
+			})
+		})
+	})
+</script>

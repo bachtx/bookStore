@@ -13,7 +13,7 @@ class CLS_PRODUCTS{
 		return $this->objmysql->Query($sql);
 	}
 	public function GetListPro($where=' ',$order=' ORDER BY RAND() ',$limit=' '){
-		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;	
+		$sql="SELECT * FROM `tbl_products` WHERE isactive=1 ".$where.$order.$limit;
 		$objdata=new CLS_MYSQL();
 		$objcat = new CLS_CATALOGS;
 		$objdata->Query($sql);

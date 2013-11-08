@@ -1,4 +1,5 @@
 <?php
+session_start();
 // include config
 define('incl_path','includes/');
 define('libs_path','libs/');

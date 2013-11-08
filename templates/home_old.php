@@ -9,7 +9,6 @@
     <script src="js/jquery-ui.js" ></script>
 	<script src="js/gfscript.php" ></script>
     <script src="js/jquery.bxslider.js"></script>
-	
     <script type="text/javascript">
         $(function() {
             $( "#tabs_products" ).tabs();
@@ -45,22 +44,8 @@
                 </form>
                 <div class="cart">
                     <div class="col1">
-						<?php 
-							$count=0;$total=0; 
-							$objmysql= new CLS_MYSQL();
-							if(isset($_SESSION['CART'])){
-								$count=count($_SESSION['CART']);
-								/*for($i=0;$i<$count;$i++)
-									$proid=$_SESSION['CART'][$i]['proid'];
-									$sql="SELECT `pro_id`,`name`,`thumb`,`cur_price`  FROM tbl_products WHERE `pro_id`='$proid'";
-									$objmysql->Query($sql);	
-									$row=$objmysql->Fetch_Assoc();
-									$amount=$row['cur_price']*$_SESSION['CART'][$i]['proid'];				
-									$total+=$amount;*/
-							}
-						?>
-                        <p class="y_cart"><span class="your_cart">Your cart</span> (<?php echo $count;?> items)</p>
-                        <p><span class="price">$<?php echo $total.'.0';?></span> <a href="<?php echo ROOTHOST;?>index.php?com=products&&viewtype=cart" class="checkout">Checkout</a></p>
+                        <p class="y_cart"><span class="your_cart">Your cart</span> (2 items)</p>
+                        <p><span class="price">$125.0</span> <a href="#" class="checkout">Checkout</a></p>
                     </div><!--.col1-->
                     <div class="col2">
                         <img src="images/star.png" alt="star"/>
@@ -74,11 +59,12 @@
             <div class="box">
                 <ul>
                     <li class="hover"><a href="<?php echo ROOTHOST; ?>">Home</a></li>
-                    <li ><a href="<?php echo ROOTHOST;?>index.php?com=products&viewtype=random">Products</a></li>
-					<li ><a href="<?php echo ROOTHOST;?>index.php?com=products&viewtype=book1">Books 1$</a></li>
-                    <li><a href="<?php echo ROOTHOST;?>index.php?com=payment">Payment</a></li>
+                    <li ><a href="#">Products</a></li>
+					<li ><a href="index.php?com=products&viewtype=book1">Books 1$</a></li>
+                    <li ><a href="#">News</a></li>
+                    <li><a href="#">Payment</a></li>
                     <li><a href="#">Support</a></li>
-                    <li><a href="<?php echo ROOTHOST;?>index.php?com=contacts">Contacts</a></li>
+                    <li><a href="index.php?com=contacts">Contacts</a></li>
                 </ul>
                 <script type="text/javascript">
                     $(document).ready(function(){
@@ -153,7 +139,7 @@
 
                 </div><!--.col-->
                 <div class="col" id="col4">
-                    <h4 title="Bài vi?t m?i nh?t">Sharing On Social</h4>
+                    <h4 title="Bài viết mới nhất">Sharing On Social</h4>
 					<div class="fb-like-box" data-href="https://www.facebook.com/thietkeweb.igf" data-width="200" data-show-faces="true" data-stream="false" data-show-border="true" data-header="false"></div>
                 </div><!--.col-->
             </div><!--box-->

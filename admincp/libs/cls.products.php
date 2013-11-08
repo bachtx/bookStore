@@ -62,9 +62,9 @@ class CLS_PRODUCTS{
 		$sql="	SELECT * FROM tbl_products $strwhere ORDER BY `name` DESC, cat_id LIMIT $star,$leng";
 		$objdata=new CLS_MYSQL();
 		$objdata->Query($sql);
-		$i=0;
 		while($rows=$objdata->Fetch_Assoc())
-		{	$i++;
+		{	
+			$star++;
 			$ids=$rows['pro_id'];
 			$code=Substring(stripslashes($rows['code']),0,10);
 			$title=Substring(stripslashes($rows['name']),0,10);
@@ -77,7 +77,7 @@ class CLS_PRODUCTS{
 			
 			$visited=$rows['visited'];
 			echo "<tr name=\"trow\">";
-			echo "<td width=\"30\" align=\"center\">$i</td>";
+			echo "<td width=\"30\" align=\"center\">$star</td>";
 			echo "<td width=\"30\" align=\"center\"><label>";
 			echo "<input type=\"checkbox\" name=\"chk\" id=\"chk\" 	 onclick=\"docheckonce('chk');\" value=\"$ids\" />";
 			echo "</label></td>";
