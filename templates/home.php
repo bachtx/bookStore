@@ -59,7 +59,7 @@
             <div class="box">
                 <ul>
                     <li class="hover"><a href="<?php echo ROOTHOST; ?>">Home</a></li>
-                    <li ><a href="#">Products</a></li>
+                    <li ><a href="index.php?com=products">Products</a></li>
 					<li ><a href="index.php?com=products&viewtype=book1">Books 1$</a></li>
                     <li ><a href="#">News</a></li>
                     <li><a href="#">Payment</a></li>

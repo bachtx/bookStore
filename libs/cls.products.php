@@ -163,5 +163,23 @@ class CLS_PRODUCTS{
 		$objdata->query($sql);
 		}
 	}
+	public function getBookRef($author_id){
+		$sql = "SELECT * FROM tbl_products";
+		$objdata = new CLS_MYSQL;
+		$objdata->query($sql);
+		while($row = $objdata->Fetch_Assoc()){
+		?>
+		<div class="book-refer">
+			<?php if($persen!=0)
+				echo "<span class=\"off\">$persen%</span>";
+				echo $imgtag;
+			?>
+			<p><a href="index.php?com=products&&viewtype=detail&&id=<?php echo $pro_id;?>"
+			 class="name_product"/><?php echo $name;?></a></p>
+			<h4><?php echo $cur_price;?>$</h4>
+		</div><!--.div_product-->
+		<?php	
+		}
+	}
 }
 ?>
