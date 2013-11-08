@@ -39,17 +39,10 @@
 			<div class="clear"></div>
 			<div id="tabs-1">
 				<!-- tir-1 -->
-				<?php $tt=0;
-				while($tt<15){
-					$tt++;
-					?>
-					<div class="div_product">
-						<span class="off">30%</span>
-						<img src="images/product/product.png" alt="product"/>
-						<p><a href="index.php?com=products&&viewtype=detail&&id=<?php echo '1';?>" class="name_product"/>The Hare With Amber Eyes</a></p>
-						<h4>50$</h4>
-					</div><!--.div_product-->
-				<?php } ?>
+				<?php
+				$product = new CLS_PRODUCTS();
+				$product->getListPro('',' ORDER BY cDate DESC',' LIMIT 15');
+				?>
 				<div class="pagin">
 					<a href="#">1</a>
 					<a href="#">2</a>
@@ -59,7 +52,9 @@
 				</div><!--.pagin-->				
 			</div>
 			<div id="tabs-2">
-				<p> San pham dang duoc cap nhat...</p>
+				<?php
+				$product->getListPro(' AND `old_price`>0',' ORDER BY cDate DESC',' LIMIT 15');
+				?>
 			</div>
 			<div id="tabs-3">
 				<p>San pham dang duoc cap nhat...</p>

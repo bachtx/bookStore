@@ -94,8 +94,8 @@ a {text-decoration:  none; color: #555454; }
 .sidebar ul li {height:  30px; line-height:  30px; display:  block; }
 .sidebar ul li:hover {background: url("../images/all_bg.png") repeat-x; overflow: hidden;}
 
-.primary {width:  770px; float: left; border: 1px solid #d6d6d6;margin-right: -5px; margin-top: 39px; padding: 20px 5px 20px 15px; margin-bottom: 10px;}
-.primary .pagin { clear: both; text-align:  right; overflow:  hidden; float: right; margin-top: 30px;}
+.primary {width:  770px; float: left; border: 1px solid #d6d6d6;margin-right: -5px; margin-top: 39px; padding: 20px 5px 35px 15px; margin-bottom: 10px;}
+.primary .pagin { clear: both; text-align:  right; margin-right: 20px; overflow:  hidden; float: right; margin-top: 58px; margin-bottom: -20px;}
 .primary .pagin a {display: block; width:  24px; height:  28px; float: left; text-align:  center; line-height:  28px; font-family: Helveticaltstd-light; font-size:  16px;}
 .primary .pagin .selected {background: url("../images/bg_pagin.png") no-repeat ; }
 .primary #tabs_products {position: relative;}
@@ -144,7 +144,7 @@ a {text-decoration:  none; color: #555454; }
 .desc #desc_tabs ul li {display:  inline; float: left; margin-right: 10px;}
 .desc #desc_tabs ul li a {display:  block;  width:  135px; height:  36px; background:  url("../images/desc_tabs.png") no-repeat; text-align:  center; line-height:  36px; font-size:  16px; font-family: "Segoe UI Symbol"; color: #fff;}
 .desc #desc_tabs ul li.ui-tabs-active a {width: 208px; height: 35px; outline:  none; background:#fff; font-size:  18px; color: #7e7e7e; border: 1px solid #d5d2d2; border-radius:  5px 5px 0px 0px; -moz-border-radius:  5px 5px 0px 0px; -webkit-border-radius:  5px 5px 0px 0px; border-bottom:  none;}
-.desc #desc_tabs #tabs-1, .desc #desc_tabs #tabs-2, .desc #desc_tabs #tabs-3 {color: #7e7e7e; font-size:  14px;}
+.desc #desc_tabs #tabs-1, .desc #desc_tabs #tabs-2, .desc #desc_tabs #tabs-3 {color: #7e7e7e; font-size:  14px; overflow: hidden;}
 .desc .comment {overflow: hidden;border: 1px solid #d5d2d2; border-radius:  5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-bottom:  20px; padding: 20px;}
 .desc .comment .name {border-bottom: 1px solid #e3e3e3; overflow: hidden; padding: 20px 0px; }
 
@@ -177,17 +177,20 @@ a {text-decoration:  none; color: #555454; }
 .check_out .check_out_button a {font-weight: bold;display: inline-block; width: 98px; height: 38px; background: url("../images/btn_submit.png") no-repeat; line-height: 38px;}
 
 /******************Contact_page****************/
-.contact_page {width: 70%; overflow: hidden; margin-left:auto; margin-right:auto;}
-.contact_page p{color:#7e7e7e; font-size:15px;}
-.contact_page form {float: left;width: 500px;}
-.contact_page form label {display: block; margin: 10px 0px; }
+.contact_page {width: 90%; overflow: hidden; margin-left:auto; margin-right:auto;}
+.contact_page p{color:#7e7e7e; font-size:16px; text-align:justify;}
+.contact_page p.name {color:#7e7e7e; font-size:30px;}
+.contact_page form {float: left; width: 600px;}
 .contact_page form input {width: 400px; padding: 5px; border: 1px solid #dedede; color: #808b98}
-.contact_page form textarea {width: 350px; padding: 30px; border: 1px solid #dedede; color: #808b98; }
-.contact_page form input[type="submit"] {margin: 20px 0px;;font-family: "SegoeWP Bold";border: none;  width: 98px; height: 38px; background: url("../images/btn_submit.png") no-repeat; cursor: pointer; color: #555454;}
-.contact_page .mess {width:70%; margin-left:auto; margin-right:auto;}
-
-.contact_page .mess p{color:#7e7e7e; font-weight:bold;}
-.contact_page table td {color:#7e7e7e;}
+.contact_page form input.text {width: 76px; padding: 5px; border: 1px solid #dedede; color: #808b98}
+.contact_page form textarea {width: 410px; height: 92px; border: 1px solid #dedede; color: #808b98; }
+.contact_page form select{width: 412px; border: 1px solid #dedede; color: #808b98; }
+.contact_page form input[type="submit"] {border: none; display: block; width: 97px; height:  38px; background: url("../images/btn_submit.png") no-repeat; color: #fff; font-size:  18px; float: left;}
+.contact_page .mess {width:80%; margin-left:auto; margin-right:auto; margin-top:30px;}
+.contact_page .mess p{color:#7e7e7e; font-weight:bold; font-size:20px;}
+.contact_page table {color:#7e7e7e; border-spacing:11px;border-collapse: separate;}
+.contact_page table td {font-size:14px;}
+.contact_page table td.bold {font-weight:bold;}
 .contact_page span {color:red; font-weight:bold;}
 /*.desc .comment .name:last-child {border-bottom: none;}*/
 .desc .comment h4 {font-size: 20px; font-family: "Segoe UI Symbol"; color: #7e7e7e; }
